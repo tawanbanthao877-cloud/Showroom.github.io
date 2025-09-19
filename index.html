@@ -1,79 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>อุปกรณ์ดับเพลิง</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D Showroom - Embed Template</title>
+
+<!-- Preconnect / Prefetch ช่วยโหลดเร็วขึ้น -->
+<link rel="preconnect" href="https://metasteps.com" crossorigin>
+<link rel="dns-prefetch" href="https://metasteps.com">
+
+<style>
+:root {
+  --bg: #f4f6fa;
+  --card: #ffffff;
+  --accent: #0b74de;
+  --muted: #667085;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --radius: 16px;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans', Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #111;
+  line-height: 1.6;
+}
+.wrap {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+.lead {
+  color: var(--muted);
+  font-size: 1rem;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+.card h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+.embed-wrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 62%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+}
+.embed-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>อุปกรณ์ดับเพลิงครบวงจร</h1>
-            <nav>
-                <ul>
-                    <li><a href="#products">สินค้า</a></li>
-                    <li><a href="#about">เกี่ยวกับเรา</a></li>
-                    <li><a href="#contact">ติดต่อ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<main class="wrap">
+  <header>
+    <div class="brand">สยามซินดิเคทเทคโนโลยี จำกัด (มหาชน)</div>
+    <div class="lead">Showroom 3D Experience</div>
+  </header>
 
-    <main>
-        <section id="hero">
-            <div class="container">
-                <h2>ปลอดภัยทุกสถานการณ์ มั่นใจด้วยอุปกรณ์ดับเพลิงคุณภาพสูง</h2>
-                <p>เรามีอุปกรณ์ดับเพลิงหลากหลายประเภท ตอบโจทย์ทุกความต้องการของคุณ</p>
-                <a href="#products" class="btn">ดูสินค้าทั้งหมด</a>
-            </div>
-        </section>
+  <section class="card">
+    <h2>MetaSteps Embed</h2>
+    <div class="embed-wrap">
+      <iframe 
+        data-src="https://metasteps.com/viewer/embed/1c9879c2-9a15-4b42-a42f-adac011c16cc?showSignIn=0&showCommunications=0"
+        title="Product showroom"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+</main>
 
-        <section id="products">
-            <div class="container">
-                <h2>สินค้าของเรา</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200" alt="ถังดับเพลิงเคมีแห้ง">
-                        <h3>ถังดับเพลิงเคมีแห้ง</h3>
-                        <p>ใช้งานง่าย เหมาะสำหรับเพลิงไหม้ประเภท A, B และ C</p>
-                        <a href="#" class="btn-small">รายละเอียด</a>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200" alt="ถังดับเพลิงชนิดน้ำยาเหลวระเหย">
-                        <h3>ถังดับเพลิงน้ำยาเหลวระเหย</h3>
-                        <p>ไม่ทิ้งคราบ ไม่ทำลายอุปกรณ์อิเล็กทรอนิกส์ เหมาะสำหรับเพลิงไหม้ประเภท C และ E</p>
-                        <a href="#" class="btn-small">รายละเอียด</a>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200" alt="ชุดดับเพลิง">
-                        <h3>ชุดดับเพลิงและอุปกรณ์เสริม</h3>
-                        <p>ชุดป้องกันส่วนบุคคลคุณภาพสูงสำหรับนักดับเพลิง</p>
-                        <a href="#" class="btn-small">รายละเอียด</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const iframes = document.querySelectorAll('iframe[data-src]');
 
-        <section id="about">
-            <div class="container">
-                <h2>เกี่ยวกับเรา</h2>
-                <p>เราคือผู้เชี่ยวชาญด้านอุปกรณ์ดับเพลิง ได้มาตรฐานสากล พร้อมให้คำปรึกษาและบริการติดตั้ง</p>
-            </div>
-        </section>
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const iframe = entry.target;
+        iframe.src = iframe.getAttribute('data-src'); // โหลด iframe ตอน scroll มาถึง
+        iframe.removeAttribute('data-src');           // ลบ attribute หลังโหลด
+        obs.unobserve(iframe);                        // เลิกสังเกต iframe นี้
+      }
+    });
+  }, {
+    rootMargin: "200px 0px" // โหลดก่อนเล็กน้อยก่อนจะถึง viewport
+  });
 
-        <section id="contact">
-            <div class="container">
-                <h2>ติดต่อเรา</h2>
-                <p>สอบถามข้อมูลเพิ่มเติมได้ที่: **[เบอร์โทรศัพท์/อีเมล]**</p>
-            </div>
-        </section>
-    </main>
+  iframes.forEach(iframe => observer.observe(iframe));
+});
+</script>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 เว็บไซต์อุปกรณ์ดับเพลิง</p>
-        </div>
-    </footer>
 </body>
 </html>
